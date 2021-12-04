@@ -35,3 +35,6 @@
 
 ### 5.允许远程访问
 - 把/etc/mysql/mysql.conf.d/mysqld.cnf的bind-address:127.0.0.1 注释
+
+### 6.重启服务
+- service mysql restart
