@@ -27,14 +27,15 @@
 1. 创建账户
    - create user 'root'@'%' identified by 'root';
 2. 授权
-   - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;、
+   - GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 3. 设密码
    - ALTER USER 'root'@'%' IDENTIFIED BY '你的密码';
 4. 刷新权限
    - FLUSH PRIVILEGES;
 
 ### 5.允许远程访问
-- 把/etc/mysql/mysql.conf.d/mysqld.cnf的bind-address:127.0.0.1 注释
+- 把/etc/mysql/mysql.conf.d/mysqld.cnf的bind-address=127.0.0.1 注释
+- 如果提示readonly，换成root用户操作
 
 ### 6.重启服务
 - service mysql restart
